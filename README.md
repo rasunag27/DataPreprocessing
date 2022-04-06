@@ -40,7 +40,29 @@ _Missing values present in the dataset can impact the model performance by creat
 
 4. __Encoding Categorical data__
 
-_ML models are solved based on mathematical equations which means everything should be in numbers. The dataset will not always be numerical. The data might contain categorical or text data also. These data need to be converted to numerical before loading into ML model._
+_ML models are solved based on mathematical equations which means the data should be in numbers. The dataset will not always be numerical. The data might contain categorical or text data also. These data need to be converted to numerical before loading into ML model._
 
+ * The categorical variable of independent features (Company) is encoded by using OneHotEncoder class from scikit learn.
+ * The categorical variable of dependent feature (Purchased) is encoded by using LabelEncoded class from scikit learn.
+ * Why these two are used are mentioned in the code.
+
+5. __Dataset split into train and test set__
+
+ * The algorithms of Machine learning learn from the data and predict the respective outcomes. 
+ * For this, the data is splitted into training and testing data. The algorithm is applied to the training dataset for the model to learn and then the model is validated by predicting on the testing data. From this the metrics are evaluated.
+ * In python, model_selection object from scikit_learn class splits the data into training and testing data. The testing data is specified as 20% of the data and remaining 80% for training data.
+ * More the data for training, the machine will get to learn efficiently.
+
+6. __Feature Scaling__
+
+We use standard scaler as the scaling method. This is mainly to avoid higher weightage being assigned to the feature of higher magnitude.
+
+Why StandardScaler?
+
+In our dataset, we can see that Age feature is in a magnitude range < 50 and Salary have a magnitude range of ten thousands. These variables do not contribute equally to the model fitting and might end up in bias. To deal with this problem, standardization is done where the feature will be assigned in the range of values with mean = 0 and std = 1.
+
+Mathematical formula
+
+$z = \frac{x - \mu}{\sigma}$, where $\mu$ represents meand and $\sigma$ represents standard deviation of the feature.
 
 
