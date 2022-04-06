@@ -63,6 +63,6 @@ In our dataset, we can see that Age feature is in a magnitude range < 50 and Sal
 
 Mathematical formula
 
-$z = \frac{x - \mu}{\sigma}$, where $\mu$ represents meand and $\sigma$ represents standard deviation of the feature.
+<img src="https://latex.codecogs.com/gif.latex?$z = \frac{x - \mu}{\sigma}$, where $\mu$ represents meand and $\sigma$ represents standard deviation of the feature./>
 
 
